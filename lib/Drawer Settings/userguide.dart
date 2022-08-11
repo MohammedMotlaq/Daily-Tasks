@@ -52,15 +52,6 @@ class _User_GuideState extends State<User_Guide> {
                 ),
                 Column(
                   children: [
-                    Image.asset('assets/icons/check.png',width: 32.w,height: 32.h,),
-                    Container(
-                        margin: const EdgeInsets.only(bottom: 25),
-                        child: Text('user_comp'.tr(),style: const TextStyle(fontWeight: FontWeight.normal,fontSize: 15),)
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
                     Image.asset('assets/icons/list.png',width: 32.w,height: 32.h,),
                     Container(
                         margin: const EdgeInsets.only(bottom: 25),
@@ -74,15 +65,6 @@ class _User_GuideState extends State<User_Guide> {
                     Container(
                         margin: const EdgeInsets.only(bottom: 25),
                         child: Text('user_del'.tr(),style: const TextStyle(fontWeight: FontWeight.normal,fontSize: 15),)
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Image.asset('assets/icons/double-check.png',width: 32.w,height: 32.h,),
-                    Container(
-                        margin: const EdgeInsets.only(bottom: 25),
-                        child: Text('user_mark'.tr(),style: const TextStyle(fontWeight: FontWeight.normal,fontSize: 15),)
                     ),
                   ],
                 ),

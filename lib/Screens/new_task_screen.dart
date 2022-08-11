@@ -95,9 +95,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer = _colorContainer == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer = _colorContainer == const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/shopping-cart.png";
                                     }else{
@@ -120,9 +120,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer1 = _colorContainer1 == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer1 = _colorContainer1 == const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer1 == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/coffee-cup.png";
                                     }else{
@@ -145,9 +145,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer2 = _colorContainer2 == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer2 = _colorContainer2 == const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer2 == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/barbell.png";
                                     }else{
@@ -170,9 +170,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer3 = _colorContainer3 == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer3 = _colorContainer3 == const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer3 == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/book.png";
                                     }else{
@@ -195,9 +195,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer4 = _colorContainer4 == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer4 = _colorContainer4 == const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer4 == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/eat.png";
                                     }else{
@@ -220,9 +220,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer5 = _colorContainer5 == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer5 = _colorContainer5 == const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer5 == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/location.png";
                                     }else{
@@ -245,9 +245,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer6 = _colorContainer6 == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer6 = _colorContainer6 == const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer6 == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/programming.png";
                                     }else{
@@ -270,9 +270,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer7 = _colorContainer7 == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer7 = _colorContainer7 == const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer7 == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/sleeping.png";
                                     }else{
@@ -295,9 +295,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer8 = _colorContainer8 == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer8 = _colorContainer8 == const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer8 == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/sports.png";
                                     }else{
@@ -320,9 +320,9 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               InkWell(
                                 onTap: (){
                                   setState(() {
-                                    _colorContainer9 = _colorContainer9 == Color.fromRGBO(159, 255, 255, 1.0) ?
+                                    _colorContainer9 = _colorContainer9 ==const Color.fromRGBO(159, 255, 255, 1.0) ?
                                     Colors.white :
-                                    Color.fromRGBO(159, 255, 255, 1.0);
+                                    const Color.fromRGBO(159, 255, 255, 1.0);
                                     if(_colorContainer9 == const Color.fromRGBO(159, 255, 255, 1.0)){
                                       imageAssets = "assets/icons/dots.png";
                                     }else{
@@ -451,7 +451,7 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                                   return "your content must be 5 characters";
                                 }
                                 if(value.contains(':')){
-
+                                  return null;
                                 }else{
                                   return ": not found!";
                                 }
@@ -463,7 +463,7 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                                 fillColor: const Color.fromRGBO(255, 255, 255, 1),
                                 filled: true,
                                 hintText: 'ex_task_time'.tr(),
-                                hintStyle: TextStyle(color: Colors.grey),
+                                hintStyle:const TextStyle(color: Colors.grey),
                                 border: OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                   borderRadius: BorderRadius.circular(10),
@@ -498,7 +498,7 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                                   return "your content must be 2 characters";
                                 }
                                 if(value == 'AM' || value == 'PM'|| value == 'am'|| value == 'pm'){
-
+                                  return null;
                                 }else{
                                   return "Invalid Period!!";
                                 }
@@ -510,7 +510,7 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                                 fillColor: const Color.fromRGBO(255, 255, 255, 1),
                                 filled: true,
                                 hintText: 'period_ex'.tr(),
-                                hintStyle: TextStyle(color: Colors.grey),
+                                hintStyle:const TextStyle(color: Colors.grey),
                                 border: OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                   borderRadius: BorderRadius.circular(10),
@@ -521,7 +521,6 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                               maxLength: 2,
                             ),
                           ),
-
                         ],
                       ),
                     ],
@@ -535,8 +534,6 @@ class _New_Task_ScreenState extends State<New_Task_Screen> {
                   onPressed: (){
                     if (formState.currentState!.validate()) {
                       DBhelper.dbhelper.insertNewTask(TaskModel(title: content, desc: content_desc, time: time, icon: imageAssets,periodTime: periodTime));
-
-
                       controller.text = "";
                       controller1.text = "";
                       controller2.text = "";

@@ -2,5 +2,4 @@
 
 import '../models/task_model.dart';
 
-List<TaskModel> tasks = [
-];
+List<TaskModel> tasks = [];

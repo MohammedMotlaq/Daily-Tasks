@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:lottie/lottie.dart';
 import 'package:thingstodo/DataBase/main_database.dart';
-import 'package:thingstodo/models/task_model.dart';
 
 import '../DataBase/data_repo.dart';
 import '../Drawer Settings/about.dart';
 import '../Drawer Settings/settings.dart';
 import '../Drawer Settings/userguide.dart';
-import 'done_task_screen.dart';
 import 'make_it_done_screen.dart';
 import 'new_task_screen.dart';
 class View_Mode_Screen extends StatefulWidget {
 
-   View_Mode_Screen({Key? key}) : super(key: key);
+   const View_Mode_Screen({Key? key}) : super(key: key);
   @override
   State<View_Mode_Screen> createState() => _View_Mode_ScreenState();
 }
@@ -22,7 +19,8 @@ class View_Mode_Screen extends StatefulWidget {
 class _View_Mode_ScreenState extends State<View_Mode_Screen> {
 
 
-  void initState(){
+  void initState()
+  {
     super.initState();
     getAllTasks();
 
@@ -33,7 +31,7 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
     tasks = await DBhelper.dbhelper.selectAllTask();
     setState((){});
   }
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   refresh () {
     getAllTasks();
     setState((){});
@@ -45,7 +43,7 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
       key: _scaffoldKey,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromRGBO(255, 255, 255, 0.9),
+        backgroundColor:const Color.fromRGBO(255, 255, 255, 0.9),
         title: Text('app_name'.tr(),style: TextStyle(color: Colors.black,fontWeight: FontWeight.w300,fontSize: 25.sp),),
         centerTitle: true,
         leading: IconButton(
@@ -67,13 +65,13 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(8, 20, 0, 0),
+              margin:const EdgeInsets.fromLTRB(8, 20, 0, 0),
               child: Column(
                 children: [
                   ListTile(
                     leading:const Icon(Icons.settings,size: 25,),
                     trailing: const Icon(Icons.arrow_forward_ios,size: 15,),
-                    title: Text('setting'.tr(),style: TextStyle(fontSize: 17),),
+                    title: Text('setting'.tr(),style:const TextStyle(fontSize: 17),),
                     onTap: (){
                       //Navigator.pop(context);
                       Navigator.push(context, MaterialPageRoute(builder: (context) => Settings(function:refresh)));
@@ -88,10 +86,10 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                   ListTile(
                     leading:const Icon(Icons.tips_and_updates_rounded,size: 25,),
                     trailing: const Icon(Icons.arrow_forward_ios,size: 15,),
-                    title: Text('user_guide'.tr(),style: TextStyle(fontSize: 17),),
+                    title: Text('user_guide'.tr(),style:const TextStyle(fontSize: 17),),
                     onTap: (){
                       //Navigator.pop(context);
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => User_Guide()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) =>const User_Guide()));
                     },
                   ),
                   const Divider(
@@ -103,9 +101,9 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                   ListTile(
                     leading:const Icon(Icons.info_outline_rounded,size: 25,),
                     trailing: const Icon(Icons.arrow_forward_ios,size: 15,),
-                    title: Text('about'.tr(),style: TextStyle(fontSize: 17),),
+                    title: Text('about'.tr(),style:const TextStyle(fontSize: 17),),
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => About()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const About()));
                     },
                   ),
                   Container(
@@ -144,7 +142,7 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                   context: context,
                   builder: (BuildContext context){
                     return Dialog(
-                      backgroundColor: Color.fromRGBO(255, 255, 255, 0.88),
+                      backgroundColor:const Color.fromRGBO(255, 255, 255, 0.88),
                       alignment: Alignment.center,
                       child: Container(
                         width: 320.w,
@@ -156,16 +154,16 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                         child: Column(
                           children: [
                             Container(
-                              width: 40,
-                              height: 40,
-                              margin: EdgeInsets.symmetric(vertical: 20),
+                              width: 40.w,
+                              height: 40.h,
+                              margin:const EdgeInsets.symmetric(vertical: 20),
                               child: Image(image: AssetImage(tasks[index].icon!),),
                             ),
-                            Container(
+                            SizedBox(
                               width: 243.w,
                               height: 20.h,
                               child: Text(tasks[index].title??"no Title",
-                                style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,),
+                                style:const TextStyle(fontSize: 16,fontWeight: FontWeight.bold,),
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 2,
                                 textAlign: TextAlign.center,
@@ -178,7 +176,7 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Container(
+                                  SizedBox(
                                     width: 26.w,
                                     height: 14.h,
                                     child: Text(tasks[index].time??"00:00",
@@ -189,7 +187,7 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                                       textAlign: TextAlign.center,
                                     ),
                                   ),
-                                  Container(
+                                  SizedBox(
                                     width: 26.w,
                                     height: 14.h,
                                     child: const Text('PM',
@@ -206,7 +204,7 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                             Container(
                               width: 70.w,
                               height: 16.h,
-                              margin: EdgeInsets.only(top: 50),
+                              margin:const EdgeInsets.only(top: 50),
                               child: Text(
                                 'des'.tr(),
                                 style: const TextStyle(
@@ -221,7 +219,7 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                               margin: const EdgeInsets.fromLTRB(0, 15,0,50),
                               child: Text(
                                 tasks[index].desc!,
-                                style: TextStyle(
+                                style:const TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w300,
                                 ),
@@ -270,9 +268,9 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
               child: Container(
                 width: 317.w,
                 height: 52.h,
-                margin: EdgeInsets.fromLTRB(20, 30, 20, 0),
+                margin:const EdgeInsets.fromLTRB(20, 30, 20, 0),
                 decoration: BoxDecoration(
-                    color: Color.fromRGBO(255, 255, 255, 0.9),
+                    color:const Color.fromRGBO(255, 255, 255, 0.9),
                     borderRadius: BorderRadius.circular(10)
                 ),
                 child: Row(
@@ -280,15 +278,15 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                     Container(
                       width: 40.w,
                       height: 40.h,
-                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      margin: const EdgeInsets.symmetric(horizontal: 10),
                       child:  Image(image: AssetImage(tasks[index].icon!),),
                     ),
                     Container(
                       width: 210.w,
                       height: 19.h,
-                      margin: EdgeInsets.only(top: 5),
+                      margin:const EdgeInsets.only(top: 5),
                       child:  Text(tasks[index].title!,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w300,
                           fontSize: 14,
                         ),
@@ -362,19 +360,6 @@ class _View_Mode_ScreenState extends State<View_Mode_Screen> {
                   child:const Image(image: AssetImage('assets/icons/list.png'),fit: BoxFit.fill,),
                 ),
               ),
-              // InkWell(
-              //   onTap: (){
-              //     Navigator.push(context, MaterialPageRoute(builder: (context){
-              //       return Done_Task_Screen();
-              //     }));
-              //   },
-              //   child: Container(
-              //     width: 40.w,
-              //     height: 35.h,
-              //     margin: const EdgeInsets.only(bottom: 4),
-              //     child: const Image(image: AssetImage('assets/icons/check.png'),),
-              //   ),
-              // ),
               InkWell(
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context){

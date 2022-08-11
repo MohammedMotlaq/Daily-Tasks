@@ -24,13 +24,13 @@ class DBhelper{
   }
 
     Future<Database> createConnectionWithDatabase() async{
-    log("on createconnectionwithdatabase");
+    log("on createConnectionWithDatabase");
     String databasePath = await getDatabasesPath();
-    String databasename = 'database11';
-    String fullPath = join(databasePath,databasename);
+    String databaseName = 'database11';
+    String fullPath = join(databasePath,databaseName);
 
     Database database = await openDatabase(fullPath,version: 1,onCreate: (db,i)async{
-      print("in oncreate");
+      log("in onCreate");
      await db.execute('''
         CREATE TABLE $tableName (
         $taskId INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -60,11 +60,6 @@ class DBhelper{
 
   selectOneTask(int id){
     database!.query(tableName, where: '$taskId=?', whereArgs: [id]);
-  }
-
-  updateOneTask(TaskModel taskModel) async{
-    taskModel.isComplete = !taskModel.isComplete!;
-    int count = await database!.update(tableName, taskModel.toMap(), where: '$taskId=?',whereArgs: [taskModel.id]);
   }
 
   deleteOneTask(int id){
